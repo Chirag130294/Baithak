@@ -1,0 +1,34 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "rooms": {
+      "$code": {
+        ".read": true,
+        ".write": "auth != null && (data.exists() ? data.child('hostUid').val() === auth.uid : newData.child('hostUid').val() === auth.uid)",
+        ".validate": "!newData.exists() || (newData.hasChildren(['game','hostUid','data','status']) && newData.child('data').isString() && newData.child('data').val().length < 300000 && newData.child('hostUid').val() === (data.exists() ? data.child('hostUid').val() : auth.uid))"
+      }
+    },
+    "userRooms": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid"
+      }
+    },
+    "profiles": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid"
+      }
+    },
+    "presence": {
+      "$code": {
+        ".read": true,
+        "$cid": {
+          ".write": true,
+          ".validate": "newData.isNumber()"
+        }
+      }
+    }
+  }
+}
