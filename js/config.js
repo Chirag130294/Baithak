@@ -9,7 +9,7 @@
 // You then get Google / email-link login and live viewing on any phone.
 // ---------------------------------------------------------------------------
 
-export const firebaseConfig = null;
+//export const firebaseConfig = null;
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyA4krjWlSjv2CSctuTlOJNBgo7GGXTl1Lk",
