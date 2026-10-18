@@ -10,15 +10,17 @@
 // ---------------------------------------------------------------------------
 
 export const firebaseConfig = null;
-/* Example (replace with your own values from the Firebase console):
-export const firebaseConfig = {
-  apiKey: 'AIza...',
-  authDomain: 'your-project.firebaseapp.com',
-  databaseURL: 'https://your-project-default-rtdb.firebaseio.com',
-  projectId: 'your-project',
-  appId: '1:1234567890:web:abcdef'
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyA4krjWlSjv2CSctuTlOJNBgo7GGXTl1Lk",
+  authDomain: "baithak-13712.firebaseapp.com",
+  databaseURL: "https://baithak-13712-default-rtdb.firebaseio.com",
+  projectId: "baithak-13712",
+  storageBucket: "baithak-13712.firebasestorage.app",
+  messagingSenderId: "4432327117",
+  appId: "1:4432327117:web:42d062e1c3563bdf1a9484",
+  measurementId: "G-V0185J78BV"
 };
-*/
 
 // Login methods shown on the sign-in screen (only used in live mode).
 export const features = {
